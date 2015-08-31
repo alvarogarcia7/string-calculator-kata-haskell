@@ -17,6 +17,8 @@ main = hspec $ do
 
 
 calculate :: String -> Int
-calculate expression =  read (parts !! 2) 
+calculate expression = first_operand + second_operand
     where parts' = T.chunksOf 1 $ T.pack expression
           parts = (map T.unpack parts')
+          first_operand = read (parts !! 0) 
+          second_operand = read (parts !! 2) 
