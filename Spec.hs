@@ -1,6 +1,7 @@
 import Test.Hspec
 import Test.QuickCheck
 import Control.Exception (evaluate)
+import qualified Data.Text as T
 
 main :: IO ()
 main = hspec $ do
@@ -13,5 +14,4 @@ main = hspec $ do
 
 
 calculate :: String -> Int
-calculate "0+0" = 0
-calculate "0+1" = 1
+calculate expression =  read (T.unpack (parts !! 2)) where parts = T.chunksOf 1 $ T.pack expression
