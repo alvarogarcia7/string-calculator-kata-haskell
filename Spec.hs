@@ -16,6 +16,9 @@ main = hspec $ do
         it "a non-zero with something" $ do
           calculate "1+1" `shouldBe` (2 :: Int)
   
+        it "a non-zero bigger than one character with something" $ do
+          calculate "10+1" `shouldBe` (11 :: Int)
+  
       describe "should subtract:" $ do
         it "a zero with a non-zero" $ do
           calculate "0-1" `shouldBe` (-1 :: Int)
