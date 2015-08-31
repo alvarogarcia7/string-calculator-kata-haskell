@@ -48,3 +48,4 @@ decideOperator part = case part of
     "+" -> (+)
     "-" -> (-)
     "*" -> (*)
+    "/" -> quot
