@@ -27,6 +27,9 @@ main = hspec $ do
         it "something with zero" $ do
           calculate "1*0" `shouldBe` (0 :: Int)
   
+        it "two non-zeroes" $ do
+          calculate "2*8" `shouldBe` (16 :: Int)
+  
   
 calculate :: String -> Int
 calculate expression = first_operand `operator` second_operand
