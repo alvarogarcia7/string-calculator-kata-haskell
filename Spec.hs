@@ -23,6 +23,10 @@ main = hspec $ do
         it "and be a positive number" $ do
           calculate "9-1" `shouldBe` (8 :: Int)
   
+      describe "should multiply:" $ do
+        it "something with zero" $ do
+          calculate "1*0" `shouldBe` (0 :: Int)
+  
   
 calculate :: String -> Int
 calculate expression = first_operand `operator` second_operand
