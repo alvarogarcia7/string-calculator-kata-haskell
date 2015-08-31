@@ -14,5 +14,6 @@ main = hspec $ do
 
 
 calculate :: String -> Int
-calculate expression =  read (T.unpack (parts !! 2)) 
-    where parts = T.chunksOf 1 $ T.pack expression
+calculate expression =  read (parts !! 2) 
+    where parts' = T.chunksOf 1 $ T.pack expression
+          parts = (map T.unpack parts')
