@@ -12,6 +12,9 @@ main = hspec $ do
       it "should sum a zero with a non-zero" $ do
         calculate "0+1" `shouldBe` (1 :: Int)
 
+      it "should sum a non-zero with something" $ do
+        calculate "1+1" `shouldBe` (2 :: Int)
+
 
 calculate :: String -> Int
 calculate expression =  read (parts !! 2) 
