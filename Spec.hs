@@ -40,3 +40,4 @@ calculate expression = first_operand `operator` second_operand
 decideOperator part = case part of
     "+" -> (+)
     "-" -> (-)
+    "*" -> (*)
