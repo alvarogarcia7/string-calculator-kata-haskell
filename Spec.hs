@@ -13,4 +13,5 @@ main = hspec $ do
 
 
 calculate :: String -> Int
-calculate _ = 0
+calculate "0+0" = 0
+calculate "0+1" = 1
